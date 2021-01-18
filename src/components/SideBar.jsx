@@ -6,7 +6,7 @@ import {Link as LinkRouter} from 'react-router-dom';
 
 const SideBar = ({isOpen, toggle}) => {
     return (
-        <SidebarContainer isOpen={isOpen} onClick={toggle}>
+        <SidebarContainer isOpen={isOpen}>
             <Icon onClick={toggle}>
                 <CloseIcon/>
             </Icon>
@@ -40,7 +40,7 @@ const SidebarContainer = styled.div`
     left: 0;
     transition: 0.3s ease-in-out;
     opacity: ${({isOpen})=>(isOpen? '100%': "0")};
-    top: ${({isOpen})=>(isOpen? '0': '-100')}; 
+    top: ${({isOpen})=>(isOpen? '0': '-100%')}; 
     
     
 `
